@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:53907/",
+      "applicationUrl": "http://localhost:53971/",
       "sslPort": 0
     }
   },
@@ -11,17 +11,19 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "QX_Core.FilesServer": {
+    "QX_Core.FilesCenter": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:53908"
+      "applicationUrl": "http://localhost:53972"
     }
   }
 }
