@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace QX_Core.FilesCenter.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowSpecificOrigin")]
     public class ValuesController : Controller
     {
         // GET api/values
@@ -25,8 +27,9 @@ namespace QX_Core.FilesCenter.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]dynamic query)
         {
+            return Json(new { name = query.name, age = query.age });
         }
 
         // PUT api/values/5
