@@ -49,8 +49,7 @@ namespace QX_Core.FilesCenter
 
             app.UseStaticFiles(new StaticFileOptions()
             {
-                FileProvider = new PhysicalFileProvider(
-Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot/Files")),
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot/Files")),
                 RequestPath = new PathString("/src")
             });
         }
